@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+
+    <style>
+        body{
+            display: flex; /*usa flexbox para centralizar conteúdos*/
+            justify-content: center; /*centralizar horizontalmente*/
+            align-items: center; /*centralizar verticalmente*/
+            min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+            background-color: aquamarine;
+        }
+
+        .carro{
+            position: relative;
+            animation: moverCarro 3s linear infinite;
+        }
+
+        .corpo{
+            width: 200px;
+            height: 100px;
+            background-color: darkmagenta;
+            border-radius: 20% 70% 10% 10%;
+        }
+
+        .roda{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: darkgrey;
+            border-radius: 50px;
+        }
+
+        .pneu{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .calota{
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            background-color: silver;
+            border-radius: 50%;
+        }
+      
+
+        #roda1{
+            left: 20px;
+        }
+
+        #roda2{
+            right: 20px;
+        }
+
+        @keyframes moverCarro {/*inicia a definição de uma animação chamada mover Carro*/
+            0%{ /*inicio da animação*/
+                transform: translateX(0); /*inicia a movimentação na horizontal*/
+            }
+            100%{
+                transform: translateX(100vw); /*move o carro para a direita*/
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="carro">
+        <div class="corpo"></div>
+        <div class="roda" id="roda1"></div>
+        <div class="roda" id="roda2"></div>
+    </div>
+</body>
+</html>
