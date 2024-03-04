@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(253, 201, 209);
+    display: grid;
+    grid-template-rows: 82vh 13vh 5vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center; /*centraliza na horizontal*/
+    align-items: center; /*centraliza na vertical*/
+    background-color: white;
+    gap: 10px;
+}
