@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos do getElementByld</title>
+</head>
+<body>
+    <h1>Excluir elemento</h1>
+    <button onclick="excluir()">Esconder</button>
+    <button onclick="aparecer()">Aparecer</button>
+    <div id="outraImagem">
+    <img src="https://files.tecnoblog.net/wp-content/uploads/2022/09/stable-diffusion-imagem.jpg" alt="" id="imagem">
+    </div>
+<hr>
+
+    <h1>Modificar o conteúdo de um elemento</h1>
+    <div id="meuElemento">Conteúdo inicial</div>
+    <button onclick="modificar()">Mudar</button>
+<hr> 
+
+    <h1>Alterar o estilo do elemento</h1>
+    <div id="cor">Texto colorido</div>
+    <button onclick="colorir()">Colorir</button>
+<hr>
+
+    <input id="text" type="text" value="Texto Inicial">
+    <button onclick="pegar()">Pegar texto</button>
+    <p id="conteudo"></p>
+<hr>
+
+</body>
+    <script>
+        function excluir(){
+            var elemento = document.getElementById("imagem");
+            elemento.parentNode.removeChild(elemento);
+        }
+
+        function aparecer(){
+           elemento = document.getElementById("imagem");
+           const newImg = document.createElement("img");
+           container = document.getElementById('outraImagem')
+           newImg.src = "https://files.tecnoblog.net/wp-content/uploads/2022/09/stable-diffusion-imagem.jpg"
+           container.appendChild(newImg);
+        }
+
+        function esconderTexto(){
+            var elemento = document.getElementById("esconder");
+            elemento.style.display = "none";
+        }
+
+        function aparecerElemento(){
+            var elemento = document.getElementById("esconder");
+            elemento.style.display = "";
+        }
+
+        function pegar(){
+            var elemento = document.getElementById("text");
+            var valor = elemento.value;
+            conteudo.innerHTML = valor;
+        }
+
+        function modificar(){
+            var elemento = document.getElementById("meuElemento");
+            elemento.innerHTML = "Gabi";
+        }
+
+        function colorir(){
+            var elemento = document.getElementById("cor");
+            elemento.style.fontSize = "30px";
+            elemento.style.color = 'pink';
+            elemento.style.fontWeight = "bold";
+        }
+    </script>
+</html>
